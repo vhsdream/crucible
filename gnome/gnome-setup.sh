@@ -6,16 +6,16 @@ install_packages python-pipx gnome-shell-extensions
 
 # Install gnome-extensions-cli only if not already installed
 if ! command -v ~/.local/bin/gext &> /dev/null; then
-    pipx install gnome-extensions-cli --system-site-packages
+  pipx install gnome-extensions-cli --system-site-packages
 fi
 
 EXTENSIONS=(
-    "tactile@lundal.io"
-    "just-perfection-desktop@just-perfection"
-    "blur-my-shell@aunetx"
-    "space-bar@luchrioh"
-    "undecorate@sun.wxg@gmail.com"
-    "tophat@fflewddur.github.io"
+  "tactile@lundal.io"
+  "just-perfection-desktop@just-perfection"
+  "blur-my-shell@aunetx"
+  "space-bar@luchrioh"
+  "undecorate@sun.wxg@gmail.com"
+  "tophat@fflewddur.github.io"
 )
 
 for ext in "${EXTENSIONS[@]}"; do
