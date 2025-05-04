@@ -26,9 +26,9 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow zsh
-  stow ghostty
+  stow zshrc
   stow nvim
+  stow starship
 else
   echo "Failed to clone the repository."
   exit 1
