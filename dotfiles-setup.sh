@@ -25,9 +25,13 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow lazygit
-  stow nvim
+  stow rcfiles
+  stow yazi
   stow starship
+  stow sesh
+  stow tmux
+  stow nvim
+  stow lazygit
 else
   echo "Failed to clone the repository."
   exit 1
