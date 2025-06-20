@@ -25,11 +25,8 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow --adopt rcfiles
-  stow yazi
   stow starship
-  stow sesh
-  stow tmux
+  stow yazi
   stow nvim
   stow lazygit
 else
