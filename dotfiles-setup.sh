@@ -1,12 +1,11 @@
 #!/bin/bash
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL="https://github.com/typecraft-dev/dotfiles"
+REPO_URL="https://gitlab.com/cnose/dotfiles"
 REPO_NAME="dotfiles"
 
-
 is_stow_installed() {
-  pacman -Qi "stow" &> /dev/null
+  pacman -Qi "stow" &>/dev/null
 }
 
 if ! is_stow_installed; then
@@ -26,11 +25,10 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow zshrc
+  stow lazygit
   stow nvim
   stow starship
 else
   echo "Failed to clone the repository."
   exit 1
 fi
-
