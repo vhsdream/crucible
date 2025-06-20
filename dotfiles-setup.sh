@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL="https://gitlab.com/cnose/dotfiles"
+REPO_URL="https://gitlab.com/cnose/dotfiles.git"
 REPO_NAME="dotfiles"
 
 is_stow_installed() {
@@ -25,7 +25,7 @@ fi
 # Check if the clone was successful
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
-  stow rcfiles
+  stow --adopt rcfiles
   stow yazi
   stow starship
   stow sesh
